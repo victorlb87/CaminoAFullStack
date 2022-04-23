@@ -46,3 +46,5 @@ HOSTING Y VPS
 No necesariamente seguire el mismo orden establecido, ya que lei que estudiar 2 lenguajes  a la vez es mas eficiente, aun asi tratare de el elegir temas que no necesiten requerimientos de otros para aprenderlos antes, por ejemplo iniciar con html y python. 
 
 Mis fuentes de estudios basicamente son freecodecamp.org y algunos videos de youtube cuando no encuentre lo que necesite de mi primera fuente.
+
+😄
