@@ -1,19 +1,37 @@
 # GIT BASICO
-https://www.youtube.com/watch?v=RGOj5yH7evk
+[x]https://www.youtube.com/watch?v=RGOj5yH7evk
+
+cheat sheet 
+https://www.freecodecamp.org/news/git-cheat-sheet/
+
+formas de escribir commit
+https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit
+
+continuar lectura de el tutorial
+[ ] https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/
+
+[ ] Libro epub Pro GIT
 
 ## GIT Workflow
 
 ![workflow](/imagenes/GIT1.png "Workflow")
-![branching](/imagenes/GIT2.png "branching")
-
 
 ## GIT Comandos mas usados
 
     git init 
-inicia el repo en la carpeta elegida
+Inicia el repo en la carpeta elegida.
 
     git remote add origin git@githhub.com:victorlb87/repo.git
-concecta un repo local con el remoto.
+Concecta un repo local con el remoto.
+
+    git remote -v
+Muestra el repo que se esta usando.
+
+    git branch -M main
+Cambia el nombre de master a main.
+
+    git push -u origin main
+Conecta el nuevo repositorio a github.
 
     git clone xxxx
 Copia un repositorio en tu pc.
@@ -36,6 +54,9 @@ Sube los archivos en commit a github.
     git pull 
 Descarga cambios de un repo a tu pc.
 
+## Branching
+![branching](/imagenes/GIT2.png "branching")
+
     git checkout branch
 Permite movernos en el arbol del git.
 
@@ -47,6 +68,10 @@ Muestra los cambios entre el branch y main
 
     git branch -d testbranch
 Borra branch.
+
+## Retroceder cambios
+
+**RECORDAR** .gitignore contiene los archivos que git ignorara cuando revise modificaciones en el repositorio
 
     git reset o git reset archivo
 Borra cambios
