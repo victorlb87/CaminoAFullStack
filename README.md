@@ -41,7 +41,7 @@ HOSTING Y VPS
 
 \* considero que aprender al menos lo basico de estas herramientas inicialmente ayuda a la programacion para el resto del lenguajes, es como si fueras a martillar un clavo sin saber antes como usar el martillo. 
 
-\*\* En el caso de GIT, fuera de todas las ventajas que ofrece, me parece una herramienta basica para tener un backup de los proyectos y que al ir aprendiendo se podra aplicar mejor a traves de todo el camino de aprendizaje.  
+\*\* En el caso de GIT, fuera de todas las ventajas que ofrece, me parece una herramienta basica para tener un backup de los proyectos y que se podra aplicar mejor a traves de todo el camino de aprendizaje.  
 
 No necesariamente seguire el mismo orden establecido, ya que lei que estudiar 2 lenguajes  a la vez es mas eficiente, aun asi tratare de el elegir temas que no necesiten requerimientos de otros para aprenderlos antes, por ejemplo iniciar con html y python. 
 
