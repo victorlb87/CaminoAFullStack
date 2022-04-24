@@ -8,7 +8,7 @@ Entre mis habilidades, tengo conocimiento avanzado de Ingles y basico de program
 Viendo distintos videos y leyendo distintos articulos, hice esta lista de conocimientos por aprender.
 
 - HERRAMIENTAS*
-    - TERMINAL
+    - CLI (BASH Y CMD) ✓
     - GIT**
     - VSC
         - Emmet ✓
