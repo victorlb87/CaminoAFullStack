@@ -5,12 +5,14 @@ Entre mis habilidades, tengo conocimiento avanzado de Ingles y basico de program
 
 ## El plan
 
-Viendo distintos videos y leyendo distintos articulos, hice esta lista de conocimientos por aprender.
+Viendo distintos videos y leyendo distintos articulos, hice esta lista de conocimientos por aprender. 
 
 - HERRAMIENTAS*
-    - CLI (BASH Y CMD) ✓
-    - GIT**
-    - VSC
+    - CLI ✓
+        - BASH (BASICO)✓
+        - CMD (BASICO)✓
+    - GIT** basico ✓ 
+    - VSC 
         - Emmet ✓
         - MD ✓
 
