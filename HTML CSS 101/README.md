@@ -2,9 +2,11 @@
 
 https://www.freecodecamp.org/learn/responsive-web-design/
 
-## HTML BASICO
+## **HTML BASICO**
 
-### Tags mas usado
+
+### **Tags mas usado**
+
 
 Un tag siempre va entre `<h1>` y cierra `</h1>`
 
@@ -56,23 +58,29 @@ Cuando el tipo es Checkbox permite llenar varias opciones en el formulario. Al a
 
     <div></div>
 Tag para hacer divisiones.
-
+___
 ## CSS BASICO
+
 
 El atributo style se puede agregar a los elementos html para modificar su estilo. Ten en cuenta que cuando va en linea igual se usa `;` para separar propiedades.
 
     <h1 class="clase1 clase2" >
 Las clases son estilos reutilizables que se pueden usar en el html.
 
-### Tipos de selectores
+
+### **Tipos de selectores**
+
 
 Los selectores permiten seleccionar que elementos se desea modificar, los tipos son:
-- `body` se pueden usar tags para dar estilos en el archivo css
-- `.` se usa en el archivo css para referenciar las clases
-- `#` se usa para referenciar un id
-- `[type='radio']` referencia a un atributo de un elemento
+- `body` se pueden usar tags para dar estilos en el archivo css.
+- `.` se usa en el archivo css para referenciar las clases.
+- `#` se usa para referenciar un id.
+- `[type='radio']` referencia a un atributo de un elemento.
+- `a:hover` referencia al estado del tag.
 
-### Propiedades mas usadas
+
+### **Propiedades mas usadas**
+
 
     color: red;
 Da color al texto.
@@ -80,7 +88,7 @@ Da color al texto.
     font-size: 30px;
 Tamaño del texto.
 
-    font-family: helvetica;
+    font-family: helvetica, serif, mosnospace;
 Elige el tipo de fuente para el texto. Se pueden agregar con `,` varios tipos de fuentes, esto sirve en el caso de que la fuente no se encuentre disponible pase a la siguiente. Ademas sirve en el caso de que no encuentre un caracter determinado, lo busca en la siguiente fuente.
    
     width: 100px;
@@ -93,17 +101,23 @@ Crea un borde alrededor del elemento.
 Da color al fondo.
 
     padding top right bottom left
-Controla el espacionentre el contenido del elemento y su borde.
+Controla el espacion entre el contenido del elemento y su borde.
 
     margin top right bottom left
 Controla el espacio entre el borde de un elemento y los que lo rodean. Si se pone un valor negativo, el elemento crecera.
 
-### Fuentes 
 
- <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+### **Fuentes **
+
+
+     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
 Puedes usar fuentes de la web, referenciando su URL. [Google fonts](https://fonts.google.com/) es una fuente muy usada. Este tag suele ir denntro del tag head.
 
-### Unidades
+
+### **Unidades**
+
+**Revisar en otra fuente**
 
 Las distintas unidades nos permiten definir el tamaño o espacio de un item. Por ejemplo, `px` es una unidad de longitud referida a pixels.
 
@@ -113,14 +127,18 @@ Las unidades absolutas refieren a unidades fisicas como `in` o `mm`.
 
 Las unidades relativas, como `em` o `rem` refieren a otro valor de longitud. por ejemplo, `em` esta basado en el tamaño de la fuente del elemento. 
 
-### Jerarquia de estilos
+
+### **Jerarquia de estilos**
+
 
 Los estilos de los elementos padres suelen heredarse a los hijos. En el caso que el selector directamente referencie a un elemento hijo, este hace que cambie el estilo. Ademas si este elemento tiene dos clases que lo refieren, se tendra en cuenta el estilo del ultimo selector. Si se usa el id del elemento este sera el que se tome como referencia para el estilo. Si el estilo esta en linea del html este tomara prioridad.
 
     color: red !important ; 
 Da prioridad a la propiedad para el elemento. Esta no cambia aunque se declare con otros selectores, incluyendo el estilo en linea.
 
-### Variables
+
+### **Variables**
+
 
     --penguin-skin: black;
 Las variables permiten cambiar las propiedades del los estilos al instante, solo cambiando un valor. Se tiene que declara como si fuera una propiedad dentro de un selector. Se usa de la siguiente manera:
@@ -134,11 +152,15 @@ El valor de la variable se puede modificar en un selector.
 
 Las variables pueden ayudarte a usar media queries. Por ejemlpo, cuando la pantalla es mas grande o pequeña que tu media query break point, puedes cambiar el valor y se aplicara el estilo donde se use.
 
-## Diseño Visual
+
+## **Diseño Visual**
+
 
 El diseño visual es una combinacion de tipografia, graficos, animacion, layout de la pagina, y mas para ayudar a enviar un mensaje unico.
 
-### Tags Usados
+
+### **Tags Usados**
+
 
     <u>
 Da estilo de subrayado al texto.
@@ -152,7 +174,9 @@ Da estilo de tachado.
     <hr>
 Crea una raya horizontal.
 
-### Propiedades usadas
+
+### **Propiedades usadas**
+
 
     text-align: center;
 Alinea el texto segun el valor.
@@ -185,9 +209,9 @@ Cambia el tamaño del texto.
 Aplica una sombra o mas al elemento. Los valores a indicar son: 
 - offset-x (how far to push the shadow horizontally from the element)
 - offset-y (how far to push the shadow vertically from the element)
-- blur-radius
+- blur-radius (opcional)
 - spread-radius (opcional)
-- color (opcional)
+- color 
 
 Se pueden crear varias sombras agregando comas.
 
@@ -203,12 +227,14 @@ Da el espaciado entre lineas del texto.
     a:hover {}
 Este selector permite modificar el anchor cuando esta en el estado indicado.
 
-### Cambiar la posicion de elementos
+
+### **Cambiar la posicion de elementos**
+
 
     position: relative;
 Permite especificar como mover elementos relativamente a su posicion por default. Al cambiar el elemento de su posicion, el resto de elementos se comporta como si este estuviera en su posicion por default.
 
-    bottom: 10px:
+    bottom: 10px;
 Lo aleja 10px del fondo. de la misma manera se usa `top`, `left` y `right`.
 
     position: absolute;
@@ -226,4 +252,7 @@ Especifica el orden de como los elemntos estan uno encima de otro. El numero deb
     margin: auto;
 De esta manera se puede usar el margen para centrarlo.
 
-### Colors
+
+### **Colors**
+
+
