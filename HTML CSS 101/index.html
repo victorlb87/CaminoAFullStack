@@ -8,23 +8,37 @@
     <style>
         body {
             background-color: black;
-            color:white
+            color:white;
+            font-family: sans-serif;
+        }
+        .imagensally {
+            width: 80%;
+            border-radius: 10%;
+            margin: 5px 10% 5px 10%;
+        }
+
+        .titulo {
+            /* background-color: aliceblue; */
+            color: green;
+            margin: 1%;
+            text-align: center;
+
         }
     </style>
 </head>
 <body>
     <!-- Una photo app guiandome del curso de Freecodecamp -->
     <main>
-        <h1 id="top">Hello Sally</h1>
-        <h2>SallyPhotoApp</h2>
-        <img src="imagenes/Sally_1.jpg" alt="Foto de Sally">
+        <h1 class="titulo" id="top">Hello Sally</h1>
+        <h2 class="titulo">SallyPhotoApp</h2>
+        <img class="imagensally" src="imagenes/Sally_1.jpg" alt="Foto de Sally">
         <p>Te quiero Sally.</p>
         <form action="none">
             <input type="text" name="Mensaje a Sally" id="" placeholder="Mensaje a Sally">
             <br>
             <p>Quien quiere mas a Sally:</p>
-            <label for="victor"><input type="radio" id="victor" checked>Victor</label>
-            <label for="victor2"><input type="radio" id="victor2">Victor</label>
+            <label for="victor"><input type="radio" id="victor" name="QuiereaSally" checked>Victor</label>
+            <label for="victor2"><input type="radio" id="victor2" name="QuiereaSally">Victor</label>
             <br>
             <p>Quien quiere mas a Victor:</p>
             <label for="Sally"><input type="checkbox" id="Sally" checked>Sally</label>

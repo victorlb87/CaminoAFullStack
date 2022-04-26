@@ -35,7 +35,7 @@ Crea nuevo archivo.
     rm nuevo.txt
 Borra archivo.
 
-    cp nuevo.txt carpeta1 o cp carpeta1 carpeta2
+    cp nuevo.txt carpeta1 o cp -r carpeta1 carpeta2
     cp test.txt copiatest.txt O cp test.txt ./testFolder/testCopy.txt
 Copia un archivo o directorio. Si se desea hacer una copia del mismo archivo solo se elige el nuevo nombre del la copia .
 
