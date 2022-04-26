@@ -36,7 +36,7 @@
 <body>
     <!-- Una photo app guiandome del curso de Freecodecamp -->
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.hmtl">Home</a>
         <a href="sallyphotoapp.hmtl">SallyPhotoApp</a> 
         <hr>
     </nav>
