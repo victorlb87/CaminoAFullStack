@@ -255,4 +255,88 @@ De esta manera se puede usar el margen para centrarlo.
 
 ### **Colors**
 
+**Investigar sobre teoria de color**
+
+**Investigar sobre colores terciarios**
+
+    hsl()
+Este valor usa el concepto de rueda de colores, donde el angulo del color en el circulo es de 0 a 360. Saturation es la cantidad de gris en el color. Lightness es la cantidad de blanco o negro en un color, 100% siendo blanco.
+
+    background: linear-gradient(90deg, red, yellow, rgb(204, 204, 255));
+El primer argumento la direccion donde la transicion de color comienza. En este caso 90deg indica que la gradiente va de izquierda a derecha. 45deg hace la direccion de la esquina inferior izquierda a la superio derecha y los siguientes argumentos refiere a los colores usados.
+
+    repeating-linear-gradient(90deg,yellow 0px,blue 40px, green 40px,red 80px);
+Este atributo es similar al anterior, solo que se repite. Se aceptan una variedad de valores.
+
+    background: url();
+El valor url permite usar una imagen de fondo.
+
+### **Formas de elementos**
+
+    transform: scale(2);
+Se usan esta propiedad junto con esta funcion para transformar la escala del elemento. La propiedad transform te permite modificar el elemento de distintas maneras y cuando se usa con pseudo clases como :hover, permite añadir interactividad.
+
+    transform: skewX(-32deg);
+Este valor tuerce el elemento segun lo indicadoen el eje x.
+
+    transform: skewY(-32deg);
+Lo mismo que el anterior solo que en el eje y.
+
+    ::before and ::after 
+Son pseudo-elementos que son el primero y ultimo hijo respectivamente. 
+
+```
+.heart::before {
+  content: "";
+  background-color: yellow;
+  border-radius: 25%;
+  position: absolute;
+  height: 50px;
+  width: 70px;
+  top: -50px;
+  left: 5px;
+}
+```
+Para que funciones estos pseudo-elementos, deben tener la propiedad content. Esta propiedad suele usarse para agregar photo o texto al elemento seleccionado. Cuando se usa para hacer figuras este se deja vacio como en el ejemplo.
+
+### **Animacion**
+
+Para animar elementos debes saber de las propiedades de animacion y la regla de @keyframes. Las propiedades controlan como se debe comportar y la regla de @keyframe controla que sucede durante la animacion. Hay 8 propiedades de animacion **(Investigar)** 
+
+```
+#anim {
+  animation-name: colorful;
+  animation-duration: 3s;
+}
+
+@keyframes colorful {
+  0% {
+    background-color: blue;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+```
+`animation-name` fija el nombre de la anumacion que luego lo usa @keyframes.
+`animation-duration` fija el tiempo de la animacion.
+`@keyframes` especifica que pasa en la duracion de la animacion. Esto se hace dando propiedades para frames especificos con porcentajes variando de 0% a 100%.
+
+    animation-fill-mode: forwards
+Especifica el estilo aplicado a un elemento cuando la animacion acaba.
+
+    animation-iteration-count: 3;
+Especifica el numero de iteraciones, se puede usar `infinite`.
+
+    animation-timing-function: ease;
+Controla que tan rapido cambia el elemento en la animacion.
+
+    animation-timing-function: cubic-bezier(x1,y1,x2,y2);
+Este valor te permite definir los valores de `Xs` y `Ys`, de manera que dictaran la forma de la curva en la que la animacion seguira.  
+
+
+## **Accesibilidad Aplicada**
+
+Refiere a la UI(USer inferface).
+
 
