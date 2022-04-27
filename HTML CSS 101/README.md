@@ -339,4 +339,124 @@ Este valor te permite definir los valores de `Xs` y `Ys`, de manera que dictaran
 
 Refiere a la UI(USer inferface).
 
+    <img src="importantLogo.jpeg" alt="Company logo">
+El atributo alt describe el contenido de la imagen, esto ayuda en el caso de que la pagina no carga o no puede ser vista por un usuario. Los motores de busqueda tambien lo usan para entender que incluye la imagen en los resultados de busqueda.
 
+Por especificacion HTML5, este atributo es obligatorio. En el caso que la imagen sea decorativa este atributo puede ir vacio.
+
+    <h1> / h2 / . .. / h6
+Los heading pueden ser leidos por los screen readers sin leeer el resto de la pagina, dandole un resumen del contenido al usuario.
+
+    main, header, footer, nav, article, and section, among others.
+Tags que dan accesibilidad. Estos son similares a `div`. Sin embargo, el tag puede indicar el tipo de informacion contenida, que añade significado semantico al contenido.
+
+    <main>
+Este elemento es usado para el contenido principal de la pagina y debe haber unos solo por pagina. Esto es para indicar el topico principal de la pagina. No debe contener elementos comunes tipo navegacion o banners.
+
+    <article>
+Es un elemento seccionador y es usado para envolver auto-contenido independiente. Suele usarse en blogs, foros o articulos de noticias.
+
+    <section >
+Es un tag nuevo en html5, sirve para agrupar tematicamente contenido. Cuando no hay relacion entre grupo de contenidos es mejor usar `div`.
+
+    <div> > section > article
+`<div>` - groups content `<section>` - groups related content `<article>` - groups independent, self-contained content
+
+    <header >
+Usador para añadir significado semantico y envuelve informacion introductora o links de navegacion para un tag padre y trabaja correctamente alrededor de contenido que es repetido en multiples paginas.
+
+`header` comparte un embedded landmark feature al igual que `main`. Este se usa dentro de `body`.
+
+    <nav>
+Este tag se usa para contener los principales links de navegacion de tu pagina. Si hay links repetidos al final de la pagina no es necesario contenerlos en `nav`, se puede usasr `footer`.
+
+    <footer>
+ES similar a nav y header. Mayormente, se usas para contener informacion copyright o links a documentos relacionados que van al final de la pagina.
+
+    <audio>
+El contenido de audio tambien necesita una alternativa de texto para mayor accesibilidad. Esto se puede realizar con texto cercano o un  link a la transcripcion.
+Este tag soporta el atributo de control, de manera que muestra al explorador el default play, pause, otros controles y soporta la funcionalidad de teclado.
+
+Note: Multimedia content usually has both visual and auditory components. It needs synchronized captions and a transcript so users with visual and/or auditory impairments can access it. Generally, a web developer is not responsible for creating the captions or transcript, but needs to know to include them.
+
+```
+<figure>
+  <img src="roundhouseDestruction.jpeg" alt="Photo of Camper Cat executing a roundhouse kick">
+  <br>
+  <figcaption>
+    Master Camper Cat demonstrates proper form of a roundhouse kick.
+  </figcaption>
+</figure>
+```
+`figure` y `figcaption` estos items envuelven una representacion visual con su subtitulo. 
+
+    <label>
+El tag envuelve el texto para un item de control especifico, usualmente el nombre o etiqueta de eleccion. El atributo `for` en `label` asocia la etiqueta a la forma de control y es usada por lectores de pantalla.
+
+```
+<form>
+  <fieldset>
+    <legend>Choose one of these three items:</legend>
+    <input id="one" type="radio" name="items" value="one">
+    <label for="one">Choice One</label><br>
+    <input id="two" type="radio" name="items" value="two">
+    <label for="two">Choice Two</label><br>
+    <input id="three" type="radio" name="items" value="three">
+    <label for="three">Choice Three</label>
+  </fieldset>
+</form>
+```
+El tag `fieldset` envuelve el grupo de radio buttons. Usualmente usa un tag `legend` para proveeer una descripcion al grupo. The fieldset wrapper and legend tag are not necessary when the choices are self-explanatory, like a gender selection.
+
+```
+<label for="input1">Enter a date:</label>
+<input type="date" id="input1" name="input1">
+```
+`type="date"` es un atributo para ingresar fechas.
+
+    <time datetime="2013-02-13">last Wednesday</time>
+Este tag sirve para estandarizar el tieempo, el atributo `datetime` lleva un formato valido de la fecha. Esto ayuda a evitar confusion ya que establece una version del tiempo estandar. 
+
+**Make Elements Only Visible to a Screen Reader by Using Custom CSS**
+
+**CSS** puede ocultar elementos que deseas que solo sean leidos por screen readers.por ejemplo:
+```
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+```
+Note: The following CSS approaches will NOT do the same thing:
+`display: none;` or `visibility: hidden;` hides content for everyone, including screen reader users.
+Zero values for pixel sizes, such as `width: 0px; height: 0px;` removes that element from the flow of your document, meaning screen readers will ignore it.
+
+### **Contraste**
+
+The Web Content Accessibility Guidelines (WCAG), recomienda al menos 4.5 a 1 ratio de contraste para teto normal. El ratio es calculado comparando el valor de luminicidad de dos colores. Este varia de 1:1 para el mismo color a 21:1 para blanco contra negro. Hay varias herramientas para verificar esto.
+
+Los colores son una gran parte del diseño visual pero presentan dos temas. Primero, los colores no solo deben ser la manera en que se presenta informacion importante ya que los screen readers no lo detectan. Segundo, el primer plano 
+y el segundo plano deben contrastar para que personas daltonicas lo distingan.
+
+In practice, the 4.5:1 contrast ratio can be reached by shading (adding black to) the darker color and tinting (adding white to) the lighter color. Darker shades on the color wheel are considered to be shades of blues, violets, magentas, and reds, whereas lighter tinted colors are oranges, yellows, greens, and blue-greens.
+
+` **Colorblidness** ` 
+Hay varias formas de colorblidness. La mas comun es una forma reducida de detectar verdes.
+
+Note: Some online color picking tools include visual simulations of how colors appear for different types of colorblindness. These are great resources in addition to online contrast checking calculators.
+
+
+    <button accesskey="b">Important Button</button>
+`accesskey` ofrece una navegacion mas eficiente para usuarios de teclado. Este atributo se puede usar con cualquier elemento pero es mejor usado con elementos interactivos. Esto incluye links, botones y form controls. 
+
+    <div tabindex="0">I need keyboard focus!</div>
+El atributo `tabindex` tiene 3 funciones distintivas. Cuando esta en un tag, indica que nos podemos fijar en el elemento. El valor determina el comportamiento, puede ser un entero positivo, negativo o cero.
+
+Algunos elementos, como links, autromaticamente reciben foco del teclado cuando un usuario hace tab por la pagina. Es en el mismo orden en el que estan en la fuente HTML. ESto puede usarse en elementos como div, span o p.Bonus - using tabindex also enables the CSS pseudo-class :focus to work on the p tag.
+
+Note: A negative tabindex value (typically -1) indicates that an element is focusable, but is not reachable by the keyboard. This method is generally used to bring focus to content programmatically (like when a div used for a pop-up window is activated), and is beyond the scope of these challenges.
+
+`tabindex` tambien especifica el orden de tab para los elementos, siendo el mayor valor 1 el cual toma prioridad, luego los valores positivos hasta que acaben y vuelve a los default con valor 0.
