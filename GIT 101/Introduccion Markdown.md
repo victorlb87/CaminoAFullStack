@@ -1,4 +1,9 @@
 # Guia markdown 
+Revisar siguiente contenido:
+- https://www.markdownguide.org/
+- https://dave.autonoma.ca/blog/2019/05/22/typesetting-markdown-part-1/
+- https://docs.gitlab.com/ee/user/markdown.html
+- https://github.com/mundimark/awesome-markdown
 
 # Los Usos mas comunes
 

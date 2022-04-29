@@ -363,17 +363,22 @@ Es un tag nuevo en html5, sirve para agrupar tematicamente contenido. Cuando no 
 `<div>` - groups content `<section>` - groups related content `<article>` - groups independent, self-contained content
 
     <header >
-Usador para añadir significado semantico y envuelve informacion introductora o links de navegacion para un tag padre y trabaja correctamente alrededor de contenido que es repetido en multiples paginas.
+Usado para añadir significado semantico y envuelve informacion introductora o links de navegacion para un tag padre y trabaja correctamente alrededor de contenido que es repetido en multiples paginas.
 
 `header` comparte un embedded landmark feature al igual que `main`. Este se usa dentro de `body`.
 
     <nav>
-Este tag se usa para contener los principales links de navegacion de tu pagina. Si hay links repetidos al final de la pagina no es necesario contenerlos en `nav`, se puede usasr `footer`.
+Este tag se usa para contener los principales links de navegacion de tu pagina. Si hay links repetidos al final de la pagina no es necesario contenerlos en `nav`, se puede usar `footer`.
 
     <footer>
-ES similar a nav y header. Mayormente, se usas para contener informacion copyright o links a documentos relacionados que van al final de la pagina.
+Es similar a nav y header. Mayormente, se usas para contener informacion copyright o links a documentos relacionados que van al final de la pagina.
 
-    <audio>
+```
+<audio id="meowClip" controls>
+  <source src="audio/meow.mp3" type="audio/mpeg">
+  <source src="audio/meow.ogg" type="audio/ogg">
+</audio>
+```
 El contenido de audio tambien necesita una alternativa de texto para mayor accesibilidad. Esto se puede realizar con texto cercano o un  link a la transcripcion.
 Este tag soporta el atributo de control, de manera que muestra al explorador el default play, pause, otros controles y soporta la funcionalidad de teclado.
 
@@ -436,7 +441,7 @@ Zero values for pixel sizes, such as `width: 0px; height: 0px;` removes that ele
 
 ### **Contraste**
 
-The Web Content Accessibility Guidelines (WCAG), recomienda al menos 4.5 a 1 ratio de contraste para teto normal. El ratio es calculado comparando el valor de luminicidad de dos colores. Este varia de 1:1 para el mismo color a 21:1 para blanco contra negro. Hay varias herramientas para verificar esto.
+The Web Content Accessibility Guidelines (WCAG), recomienda al menos 4.5 a 1 ratio de contraste para verlo normal. El ratio es calculado comparando el valor de luminicidad de dos colores. Este varia de 1:1 para el mismo color a 21:1 para blanco contra negro. Hay varias herramientas para verificar esto.
 
 Los colores son una gran parte del diseño visual pero presentan dos temas. Primero, los colores no solo deben ser la manera en que se presenta informacion importante ya que los screen readers no lo detectan. Segundo, el primer plano 
 y el segundo plano deben contrastar para que personas daltonicas lo distingan.
@@ -460,3 +465,8 @@ Algunos elementos, como links, autromaticamente reciben foco del teclado cuando 
 Note: A negative tabindex value (typically -1) indicates that an element is focusable, but is not reachable by the keyboard. This method is generally used to bring focus to content programmatically (like when a div used for a pop-up window is activated), and is beyond the scope of these challenges.
 
 `tabindex` tambien especifica el orden de tab para los elementos, siendo el mayor valor 1 el cual toma prioridad, luego los valores positivos hasta que acaben y vuelve a los default con valor 0.
+
+
+## **Principios de diseño de web responsive**
+
+

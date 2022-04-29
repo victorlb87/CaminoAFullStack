@@ -54,7 +54,7 @@ Te da informacion del comando.
     [ctrl] + C
 Cierra procesos.
 
-    [ctrl] + [shift] + C / [ctrl] + [shift] + V
+    [shift] + [insert] /[ctrl] + [insert]  
 Copiar y pegar texto.
 
     exit
