@@ -95,7 +95,7 @@ Elige el tipo de fuente para el texto. Se pueden agregar con `,` varios tipos de
 Indica el tamaño del elemeto, suele ser usado para imagenes.
 
     border-color / border-width / border-style/ border-radius
-Crea un borde alrededor del elemento.
+Crea un borde alrededor del elemento.**Investigar propiedad**
 
     backgroud-color: black;
 Da color al fondo.
@@ -454,6 +454,9 @@ Hay varias formas de colorblidness. La mas comun es una forma reducida de detect
 Note: Some online color picking tools include visual simulations of how colors appear for different types of colorblindness. These are great resources in addition to online contrast checking calculators.
 
 
+### **Navecion de teclado**
+
+
     <button accesskey="b">Important Button</button>
 `accesskey` ofrece una navegacion mas eficiente para usuarios de teclado. Este atributo se puede usar con cualquier elemento pero es mejor usado con elementos interactivos. Esto incluye links, botones y form controls. 
 
@@ -468,5 +471,100 @@ Note: A negative tabindex value (typically -1) indicates that an element is focu
 
 
 ## **Principios de diseño de web responsive**
+
+
+    @media (max-width: 100px) { /* CSS Rules */ }
+    @media (min-height: 350px) { /* CSS Rules */ }
+Media queries consisten de un tipo de media y si este coincide con el tipo de sidpositivo donde se muestra.
+
+```
+img {
+  max-width: 100%;
+  height: auto;
+}
+```
+Para imagenes se puede usar porcentages para acomodarla o usar auto para mantener el tamaño de la imagen. En el ejemplo se define el ancho y el alto en auto para que tenga el aspect ratio original.
+
+```
+<style>
+  img { height: 250px; width: 250px; }
+</style>
+<img src="coolPic500x500" alt="A most excellent picture">
+```
+Debido a la cantidad de pantallas con distintas densidades de pixel o en el caso de las mas modernas iMAC, retina display, algunas imagenes se pueden ver pixeleadas. La manera mas simple de solucionar este problema es definiendo su ancho y altura a la mitad del valor que la imagen original es.
+
+### **Tipografia**
+En vez de usar em o px para un texto, se pueden usar unidades viewport. Estas unidades, como los porcentajes, son unidades relativas. Estas son relativas a la dimension del viewport (ancho y alto) de un dispositivo, y los porcetajes son relativos a el elemento padre contenedor.
+
+The four different viewport units are:
+
+- vw (viewport width): 10vw would be 10% of the viewport's width.  
+- vh (viewport height): 3vh would be 3% of the viewport's height.  
+- vmin (viewport minimum): 70vmin would be 70% of the viewport's smaller dimension (height or width).  
+- vmax (viewport maximum): 100vmax would be 100% of the viewport's bigger dimension (height or width).  
+
+**!!investigar viewport**
+
+
+## **CSS FLEXBOX**
+
+
+    display: flex;
+Esta propiedad permite usar otras propiedades de flex para hacer una pagina responsive.
+
+    flex-direction: row/ row-reverse / column / column-reverse
+Esta propiedad hace posible alinear cualquier hijo del elemento a columnas o filas. 
+
+La propiedad `justify content` tiene varias opciones para alinear y espaciar los items flex.
+
+![flex alineamiento](https://www.w3.org/TR/css-flexbox-1/images/flex-direction-terms.svg)
+
+    justify-content: center;
+Alinea los items flex al centro del contenedor flex. Hay otros valores posible:
+- `flex start` .- alinea items al inicio del contenedor. Este es el valor default
+- `flex-end` .- alinea los items al final del contenedor.
+- `space-bewteen` .- alinea los items en el centro del axis con espacio extra entre los items. El primer y ultimo items son empujados a los bordes del contenedor, el resto de espacio es distribuido equivalentemente entre el resto de items.
+- `space-around` .- el espacio es distribuido alrededor de todos los items con la mitad de espacio en cada extremo del contenedor.
+- `space-evenly` .- distribuye igualmente el espacio entre items con un espacio grande al final del contenedor.
+
+    align-items: flex-start
+Esta propiedad funciona similarmente a la anterior, usa el mismo axis. La diferencia esta en que esta propiedad usa el cross axis, en cambio `justify-content` usa el main axis para alinear elementos.
+Cuando `flex-direction: row` le dice a CSS como empujar los items en la fila o para la parte baja del contenedor y para el valor `column` a la derecha o izquierda.
+
+Los distintos valores son:
+- `flex-start` .- alinea los items al inicio del contenedor. Para las filas estos es el top y para columnas a la izquierda.
+- `flex-end` .- alinea los items al final del contenedor.
+- `center` .- alinea los items al centro.
+- `strech` .- estira los items para llenar el contenedor. Por ejemplo, los row items son estirados para llenar el top y bottom del contenedor. Este es el valor default.
+- `baseline` .- alinea los items a su linea base, que refiere la la linea donde los textos establecen.
+
+    flex-wrap: nowrap;
+Por default, el contenedor flex, llenara todos los items juntos dentro. Usando esta propiedad le decimos a los iltes que se cubran. Los valores posibles son:
+
+- nowrap .- no cubre los items.
+- wrap .- cubre los items.
+- wrap-reverse .- cubre los items en multiples lineas de abajo para arriba si estan en filas y de derecha para izquierda si estan en columnas.
+
+    flex-shrink: 1;
+Permite achicar el item si el contenedor es pequeño. Los items se achican cuando la suma del tamaño de todos los items es mayor a la del contenedor. Los valores son numeris y mayor el numero mas los achicara comparado a otros items.
+
+    flex-grow: 1;
+Es lo opuesto, controla como crecen los items cuando el contenedor crece.
+
+    flex-basis:  10px;
+Especifica el tamaño icnicial del item antes que CSS haga modificaciones con flex-shrink o flex-grow. Las unidades usadas son px,em, %, etc.
+
+    flex: 0 1 auto; (propiedad default)
+Este es un shorcut para la 3 propiedades anteriores. El ordes es: `flex-grow`,`flex-shrink` y `flex-basis`. 
+
+    order: 1;
+Indica el orden en que apareceran los items en el contenedor.
+
+    align-self: center;
+Esta propiedad, permite ajustar los items individualmente, se usan los mismos valores que `align-items` y los reemplazara.
+
+
+
+
 
 
