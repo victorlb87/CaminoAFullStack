@@ -14,7 +14,7 @@ Lista contenidos en el directorio. Al agregar -a se muestran los ocultos.
     find /path/ -type f -name file-to-search
 Busca archivo. Donde path es el directorio a buscar `.` es para indicar el actual directorio. -type el tipo. f es para archivos normales y ocultos se puede cambiar po d (directorio), l (symbolic como accesos directos), c (character devices) y b (block devices). Podemos usar `.*` como nombre para buscar archivos ocultos.
 
-    clear
+    clear o [ctrl] + l
 Limpia pantalla.
 
     pwd
@@ -32,6 +32,12 @@ Borra la carpeta.
     touch nuevo.txt
 Crea nuevo archivo.
 
+    make nuevo 
+Compila archivos, en el ejemplo nuevo.c.
+
+    code nuevo
+crea archivo .c
+
     rm nuevo.txt
 Borra archivo.
 
@@ -40,7 +46,7 @@ Borra archivo.
 Copia un archivo o directorio. Si se desea hacer una copia del mismo archivo solo se elige el nuevo nombre del la copia .
 
     mv archivo.txt */destino/
-Mueve el archivo a la carpeta elegida.
+Mueve el archivo a la carpeta elegida. Sirve tambien para carpetas y renombrar.
 
     head readme.md
 Lee la primera linea de un archivo.

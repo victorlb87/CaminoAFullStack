@@ -10,8 +10,8 @@ Da el titulo a la ventana CMD
     help
 muestra los comandos que se pueden usar, ademas puede ir acompa;ado de el nombre de otro comando para mostrar la informacion de este tambien se puede usa '/?'
 
-    cls
-Limpia la consola
+    cls 
+Limpia la consola 
 
     dir
 muestra los archivos en el directorio

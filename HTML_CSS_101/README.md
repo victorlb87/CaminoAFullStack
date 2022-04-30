@@ -552,7 +552,7 @@ Permite achicar el item si el contenedor es pequeño. Los items se achican cuand
 Es lo opuesto, controla como crecen los items cuando el contenedor crece.
 
     flex-basis:  10px;
-Especifica el tamaño icnicial del item antes que CSS haga modificaciones con flex-shrink o flex-grow. Las unidades usadas son px,em, %, etc.
+Especifica el tamaño inicial del item antes que CSS haga modificaciones con flex-shrink o flex-grow. Las unidades usadas son px,em, %, etc.
 
     flex: 0 1 auto; (propiedad default)
 Este es un shorcut para la 3 propiedades anteriores. El ordes es: `flex-grow`,`flex-shrink` y `flex-basis`. 
@@ -564,7 +564,98 @@ Indica el orden en que apareceran los items en el contenedor.
 Esta propiedad, permite ajustar los items individualmente, se usan los mismos valores que `align-items` y los reemplazara.
 
 
+## **CSS GRID**
 
 
+Es un nuevo concepto que permite crear responsive layouts. Funciona, convirtiendo una pagina html en una cuadricula, y permite colocar sus hijos dentro.
 
+    display: grid;
+Propiedad que convierte el elemento en cuadricula.
 
+```
+.container {
+  display: grid;
+  grid-template-columns: 50px 50px;
+}
+```
+`grid-template-columns` agrega columnas a la cuadricula. En el ejemplo, hay 2 columnas de 50px, el valor de cada parammetro indica el ancho de cada una. `grid-templates-rows` funciona de manera analoga y pueden trabajar juntas.
+
+**Use CSS Grid units to Change the Size of Columns and Rows**
+Se pueden usa unidades absolutas y relativas como px y em para definir las columnas y filas. Se pueden usar las siguientes tambien:
+- fr .- ajusta las filas o columnas a una fraccion del espacio disponible.
+- auto .- ajusta el ancho o alto del contenido automaticamente.
+- % .- ajusta el contenido respecto al porcentaje del ancho del contenedor.
+
+    grid-template-columns: auto 50px 10% 2fr 1fr;
+Este ejemplo, crea 5 columnas. La primera es ancha como su contenido, la segunda 50px, la tercera es el 10% del contenedor, las 2 ultimas dividen el espacio restante en 3 secciones, 2 de estas para la cuarta columna y una para la quinta.
+
+    grid-column-gap: 10px;
+Esta propiedad añade un espacio entre columnas. Para las filas se usa `grid-row-gap`.
+
+    grid-gap: 10px;
+Establece lo mismo que las anteriores, si se escribe un solo valor se establece el espacio para columnas y filas, si se dan 2 valores, usara el primero para las filas y el segundo para las columnas. 
+
+![Grid3x3](/HTML_CSS_101/imagenes/grid3x3.png)
+
+    grid-column: 1 / 3;
+Indica donde quieres que el item inicie. En el ejemplo, indicara que el item empiece en la primera linea vertical comenzando desde la izquierda y se extienda hasta la tercera linea, consumiendo 2 columnas.
+
+    grid-row: 1 / 3;
+Funciona analogamente a `grid-column`.
+
+    justify-self: stretch / start / center / end ;
+Se pueden alinear el contenido de los items horizontalmente con esta propiedad. Por default esta propiedad tiene el valor `stretch`.
+
+    align-self: stretch;
+Con los mismos valores de la propiedad `justify-self`, esta propiedad permite alinear un item horizontalmente. 
+
+    justify-items: stretch; horizontal
+    align-items: stretch;   vertical
+Alinea todos los items del contenedor.
+
+```
+grid-template-areas:
+  "header header header"
+  "advert content content"
+  "advert footer footer";
+```
+Se puede agrupar las celdas en tu cuadricula juntas en una area y darles nombre. En el ejemplo, se agrupan las celdas en 4 areas; header, advert, content, and footer. Cada palabra representa una celda y cada "" representa una fila.
+
+```
+.item1 {
+  grid-area: header;
+}
+```
+Esta propiedad hace que los que tengan la clase indicadad ocupen el area llamada header.
+
+```
+item1 { grid-area: 1/1/2/4; }
+grid-area: horizontal line to start at / vertical line to start at / horizontal line to end at / vertical line to end at;
+```
+`grid-area` tambien se puede usar de esta forma, indicando en que lineas comienza y que lineas termina.
+
+```
+grid-template-rows: repeat(100, 50px);
+```
+La funcion repeat, permite crear filas y columnas sin necesidad de especificar cada una.
+
+```
+grid-template-columns: repeat(2, 1fr 50px) 20px;
+se traduce 
+grid-template-columns: 1fr 50px 1fr 50px 20px;
+```
+Tambien se puede especificar que parte se repetira y cual se indicara individualmente.
+
+    grid-template-columns: 100px minmax(50px, 200px);
+El valor `minmax` permite limitar el tamaño del item cuando el grid contenedor cambia de tamaño. En el ejemplo, una columna es de 100px y la otra puede varias entre 50px y 200px.
+
+    repeat(auto-fill, minmax(60px, 1fr));
+La opcion auto-fill permite automaticamente insertar la filas y columnas posibles, del tamaño elegido, dentro del tamaño del contenedor. Cuando el contenedor cambia de tamaño esta funcion añade columnas de 60px y estirandolas hasta que se pueda insertar otra. 
+Si tu contenedor no tiene espacio para los items en una fila los movera a otra.
+
+    repeat(auto-fit, minmax(60px, 1fr));
+`auto-fit` en vez de incluir celdas, este estira los items para cubrir los espacios nuevos.
+
+**Use Media Queries to Create Responsive Layouts**
+
+**Create Grids within Grids**
