@@ -515,7 +515,7 @@ Esta propiedad permite usar otras propiedades de flex para hacer una pagina resp
     flex-direction: row/ row-reverse / column / column-reverse
 Esta propiedad hace posible alinear cualquier hijo del elemento a columnas o filas. 
 
-La propiedad `justify content` tiene varias opciones para alinear y espaciar los items flex.
+La propiedad `justify-content` tiene varias opciones para alinear y espaciar los items flex.
 
 ![flex alineamiento](https://www.w3.org/TR/css-flexbox-1/images/flex-direction-terms.svg)
 
